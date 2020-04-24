@@ -8,7 +8,7 @@ pwd
 
 ANDROID_NDK=$HOME/android-sdk/ndk-bundle
 BOOSTVER=1.65
-ROOT=$HOME/projects/ac-access/.build_${AC_PLATFORM}
+ROOT=$CPPREST_ROOT/.build_${AC_PLATFORM}
 BOOST_ROOT=${ROOT}/boost-1.65-${AC_PLATFORM}/armeabi-v7a
 OPENSSL_ROOT=${ROOT}/openssl-1.0.2l-${AC_PLATFORM}
 

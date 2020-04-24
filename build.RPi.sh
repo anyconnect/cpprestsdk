@@ -8,7 +8,7 @@ pwd
 
 
 
-ROOT=$HOME/projects/ac-access/.build_RPi
+ROOT=$CPPREST_ROOT/.build_RPi
 BOOST_ROOT=${ROOT}/boost-1.61-RPi
 OPENSSL_ROOT=${ROOT}/openssl-1.0.2l-RPi
 

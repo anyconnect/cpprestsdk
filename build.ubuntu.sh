@@ -6,7 +6,7 @@ mkdir ${CPPREST_BUILD_DIR}
 cd ${CPPREST_BUILD_DIR}
 pwd
 
-BOOST_ROOT=$HOME/projects/ac-access/.build_ubuntu/boost-1.61-ubuntu
+BOOST_ROOT=$CPPREST_ROOT/.build_ubuntu/boost-1.61-ubuntu
 
 command="cmake .. -DBUILD_TESTING=false -DBUILD_SAMPLES=true \
   -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTS=false -DBUILD_SAMPLES=true \
