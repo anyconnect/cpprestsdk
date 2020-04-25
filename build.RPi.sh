@@ -1,10 +1,10 @@
-#!/bin/bash 
+#!/bin/bash
 
 CPPREST_BUILD_DIR=build.$AC_PLATFORM
-if [[ -d ${CPPREST_BUILD_DIR} ]]; then  rm -rf CPPREST_BUILD_DIR ; fi
+echo "Build dir: $CPPREST_BUILD_DIR"
+if [[ -d ${CPPREST_BUILD_DIR} ]]; then rm -rf ${CPPREST_BUILD_DIR} ; fi
 mkdir ${CPPREST_BUILD_DIR}
 cd ${CPPREST_BUILD_DIR}
-pwd
 
 
 
@@ -50,3 +50,5 @@ echo $command
 $command
 # cp Release/Binaries/libcpprest.a ${ROOT}/accessapi-artifacts-RPi-ms/cpprest/lib/
 make cpprest -j7
+
+echo "?"

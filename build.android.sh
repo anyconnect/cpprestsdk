@@ -1,12 +1,13 @@
 #!/bin/bash
 
 CPPREST_BUILD_DIR=build.$AC_PLATFORM
-if [[ -d ${CPPREST_BUILD_DIR} ]]; then  rm -rf CPPREST_BUILD_DIR ; fi
+echo "Build dir: $CPPREST_BUILD_DIR"
+if [[ -d ${CPPREST_BUILD_DIR} ]]; then rm -rf ${CPPREST_BUILD_DIR} ; fi
 mkdir ${CPPREST_BUILD_DIR}
 cd ${CPPREST_BUILD_DIR}
-pwd
 
-ANDROID_NDK=$HOME/android-sdk/ndk-bundle
+
+ANDROID_NDK=$HOME/android-sdk/android-ndk-r18b
 BOOSTVER=1.65
 ROOT=$CPPREST_ROOT/.build_${AC_PLATFORM}
 BOOST_ROOT=${ROOT}/boost-1.65-${AC_PLATFORM}/armeabi-v7a
@@ -36,11 +37,9 @@ build_cpprestsdk() {
     -DBoost_SYSTEM_LIBRARY=${BOOST_ROOT}/lib  \
     -DBoost_SYSTEM_LIBRARY=${BOOST_ROOT}/lib/libboost_system-clang-mt-1_65_1.a  \
     -DBoost_THREAD_LIBRARY=${BOOST_ROOT}/lib/libboost_thread-clang-mt-1_65_1.a  \
-    -DBOOST_THREAD_LIBRARY=${BOOST_ROOT}/lib/libboost_thread-clang-mt-1_65_1.a  \
     -DBoost_ATOMIC_LIBRARY=${BOOST_ROOT}/lib/libboost_atomic-clang-mt-1_65_1.a  \
     -DBoost_CHRONO_LIBRARY=${BOOST_ROOT}/lib/libboost_chrono-clang-mt-1_65_1.a  \
     -DBoost_DATE_TIME_LIBRARY=${BOOST_ROOT}/lib/libboost_date_time-clang-mt-1_65_1.a  \
-    -DBoost_REGEX_LIBRARY=${BOOST_ROOT}/lib/libboost_regex-clang-mt-1_65_1.a  \
     -DBoost_RANDOM_LIBRARY=${BOOST_ROOT}/lib/libboost_random-clang-mt-1_65_1.a  \
     -DBoost_FILESYSTEM_LIBRARY=${BOOST_ROOT}/lib/libboost_filesystem-clang-mt-1_65_1.a  \
     
