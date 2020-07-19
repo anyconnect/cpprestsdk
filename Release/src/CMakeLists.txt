@@ -187,7 +187,7 @@ configure_pch(cpprest stdafx.h pch/stdafx.cpp /Zm120)
 
 if(CMAKE_CXX_COMPILER_ID MATCHES "Clang" OR CMAKE_CXX_COMPILER_ID MATCHES "GNU")
   if(WERROR)
-    target_compile_options(cpprest PRIVATE -Werror)
+    target_compile_options(cpprest PRIVATE)
   endif()
   target_compile_options(cpprest PRIVATE -pedantic ${WARNINGS})
 elseif(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")

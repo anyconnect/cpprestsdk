@@ -22,6 +22,7 @@ set(CPPREST_EXCLUDE_BROTLI ON CACHE BOOL "Exclude Brotli compression functionali
 set(CPPREST_EXPORT_DIR cmake/cpprestsdk CACHE STRING "Directory to install CMake config files.")
 set(CPPREST_INSTALL_HEADERS ON CACHE BOOL "Install header files.")
 set(CPPREST_INSTALL ON CACHE BOOL "Add install commands.")
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 if(IOS OR ANDROID)
   set(BUILD_SHARED_LIBS OFF CACHE BOOL "Build shared libraries")
